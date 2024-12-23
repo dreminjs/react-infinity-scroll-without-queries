@@ -9,6 +9,8 @@ interface IItem {
 type Items = IItem[];
 
 function App() {
+  const LIMIT = 2;
+
   const { ref: refInView, inView } = useInView();
 
   const data: Items = [
@@ -169,9 +171,12 @@ function App() {
   const [index, setIndex] = useState<number>(0);
 
   useEffect(() => {
-    if (inView) {
-      setCurrentArrays((prev) => [...prev, [...data.slice(index, index + 2)]]);
-      setIndex((prevIndex) => prevIndex + 2);
+    if (inView && data.length > index + LIMIT) {
+      setCurrentArrays((prev) => [
+        ...prev,
+        [...data.slice(index, index + LIMIT)],
+      ]);
+      setIndex((prevIndex) => prevIndex + LIMIT);
     }
   }, [data, inView, index]);
 
