@@ -27,7 +27,7 @@ function App() {
       ]);
       setIndex((prevIndex) => prevIndex + LIMIT);
     }
-  }, [data, inView, index]);
+  }, [inView, index]);
 
   return (
     <ul className="list">
