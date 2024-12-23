@@ -180,7 +180,7 @@ function App() {
       {currentArrays.map((items, itemIndex) =>
         items.map((item, index) => (
           <li key={index} className="item">
-            {`${itemIndex + 1}.${index} item.title`}
+            {`${itemIndex} item.title`}
           </li>
         ))
       )}
