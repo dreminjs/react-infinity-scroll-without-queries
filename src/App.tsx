@@ -9,7 +9,7 @@ interface IItem {
 type Items = IItem[];
 
 function App() {
-  const LIMIT = 2;
+  const LIMIT = 1;
 
   const { ref: refInView, inView } = useInView();
 
