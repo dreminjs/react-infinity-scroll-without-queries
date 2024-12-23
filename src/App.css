@@ -1,0 +1,25 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.list {
+    height: 300px;
+    width: 300px;
+    overflow-y: scroll;
+    list-style: none;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.item {
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid green;
+}
